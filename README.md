@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Entraînement au checkpoint 2 : Rick & Morty
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Créer un composant <Home> qui affiche un titre "Rick & Morty" dans une balise <h1> et une description dans une balise <p>
 
-## Available Scripts
+Créer le composant <CharacterItem> qui affiche les propritétés name et status (Alive ou Dead) d'un personnage de l'univers de Rick & Morty.
 
-In the project directory, you can run:
+Faire en sorte d'afficher ces informations à partir des props.
 
-### `npm start`
+Créer un composant <CharacterList> qui affiche la liste des 20 premiers personnages de Rick & Morty.
+Chaque personnage sera affiché avec le composant <CharacterItem>.
+L'API à appeler est la suivante : https://rickandmortyapi.com/api/character
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ajouter un bouton "Dead" en haut du composant <CharacterList>.
+Au clic sur ce dernier, filtrer la liste pour n'afficher que les personnages dont la propriété status à la valeur "Dead".
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Créer un <Router> pour afficher les vue suivantes :
+- sur l'url '/', afficher le composant <Home>
+- sur l'url '/characters', afficher le composant <CharacterList>
 
-### `npm test`
+Créer un composant <Navigation> qui contient deux liens 'Home' et 'Characters', permettant de naviguer respectivement sur les deux urls '/' et 'characters'.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Créer un composant <CharacterDetails> qui affiche plus de détails sur un personnage : name, status, species et image.
+Afficher les informations du personnage à partir d'un appel d'API : https://rickandmortyapi.com/api/character/1
 
-### `npm run build`
+Modifier l'appel d'API afin de pouvoir changer l'identifiant du personnage à afficher à partir d'une variable.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Créer une route '/characters/:id' permettant d'afficher le composant <CharacterDetails>.
+Afficher le personnage correspondant à l'identifiant passé en url, ex : /characters/2 devra afficher les informations de Morty Smith.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ajouter un lien dans <CharacterItem>, permettant d'accéder à la fiche du personnage correspondant.
